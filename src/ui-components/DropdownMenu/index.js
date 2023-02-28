@@ -58,12 +58,6 @@ const DropdownMenu = ({
         style={dropdownContainerStyle}
       >
         <div style={{ background: '#fff' }}>{children}</div>
-        
-        {/* <ul className={styles['menu-ul']}>
-            <li onClick={() => alert(1)}>Item 1</li>
-            <li onClick={() => alert(2)}>Item 2</li>
-            <li onClick={() => alert(3)}>Item 3</li>
-        </ul> */}
       </div>
     </div>
   );
