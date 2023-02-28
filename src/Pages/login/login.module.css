@@ -1,0 +1,27 @@
+.container{
+
+}
+.login-container{
+    width: 800px;
+    height: 400px;
+    background: #fff;
+    margin: 100px auto;
+    display: flex;
+}
+
+.brand-container{
+    width: 50%;
+    height: 100%;
+    background: blue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+}
+
+.form-container{
+    width: 50%;
+}

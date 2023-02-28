@@ -1,0 +1,22 @@
+.dropdown-menu{
+    position: relative;
+}
+
+.dropdown-menu svg{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dropdown-container{
+    min-width: 200px;
+    padding: 5px;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.dropdown-container.active{
+    display: block;
+}

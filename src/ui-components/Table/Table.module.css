@@ -1,0 +1,53 @@
+.table-container{
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px 0;
+    border-radius: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    margin: 20px;
+}
+.table-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    text-align: left;
+}
+.table th{
+    font-size: 12px;
+}
+.table tr{
+    border-top: 1px solid rgb(211, 211, 211);
+}
+.table td, .table th{
+    padding: 10px ;
+}
+
+.table tr td:nth-of-type(1){
+    font-weight: bold;
+}
+
+.table tr td:not(:nth-of-type(1)){
+    color: gray;
+}
+
+.table tr td span{
+    display: inline-block;
+    
+}
+.table tr td span:nth-of-type(1) > svg{
+    font-size: 20px;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+}
+.table tr th span:nth-of-type(2){
+    position: relative;
+    top: 2px;
+}

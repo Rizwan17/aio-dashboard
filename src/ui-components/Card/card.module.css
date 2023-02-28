@@ -1,0 +1,25 @@
+.card{
+    background: #fff;
+    border: 1px solid rgb(211, 211, 211);
+    color: #000;
+    width: 100%;
+    min-height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 10px;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card-footer{
+    border-top: 1px solid rgb(211, 211, 211);
+    box-sizing: border-box;
+    padding: 10px;
+}

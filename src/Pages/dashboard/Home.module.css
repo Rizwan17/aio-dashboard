@@ -1,0 +1,5 @@
+.content{
+  width: calc(100% - 300px);
+  position: relative;
+  left: 300px;
+}

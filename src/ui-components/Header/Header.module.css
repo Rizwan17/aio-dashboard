@@ -1,0 +1,29 @@
+.container{
+    width: calc(100% - 300px);
+    height: 60px;
+    background: #fff;
+    position: relative;
+    left: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.header-navigations{
+   padding: 0; 
+   margin: 0;
+   list-style: none;
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+
+.header-navigations > li{
+    display: inline-block;
+    height: 40px;
+    margin: 0 5px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
