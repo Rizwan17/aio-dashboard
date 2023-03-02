@@ -16,47 +16,50 @@ const Table = ({
         </div>
         <div>{headingRightItem()}</div>
       </div>
-      <table className={styles["table"]}>
-        <thead>
-          <tr>
-            {heading.map((th, i) => (
-              <>
-                {th.icon ? (
-                  <th key={i}>
-                    <span>{th.heading}</span>
-                    <span>
-                      <th.icon />
-                    </span>
-                  </th>
-                ) : (
-                  <th key={i}>{th.heading}</th>
-                )}
-              </>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((tr) => (
-            <tr key={tr.id}>
-              {heading.map((th) => {
-                const td = tr[th.key];
-                return td.component ? (
-                  <td>{td.component()}</td>
-                ) : td.icon ? (
-                  <td>
-                    <span>
-                      <td.icon />
-                    </span>
-                    <span>{td.value}</span>
-                  </td>
-                ) : (
-                  <td>{td.value}</td>
-                );
-              })}
+      <div className={styles["table-wrapper"]}>
+        <table className={styles["table"]}>
+          <thead>
+            <tr>
+              {heading.map((th, i) => (
+                <>
+                  {th.icon ? (
+                    <th key={i}>
+                      <span>{th.heading}</span>
+                      <span>
+                        <th.icon />
+                      </span>
+                    </th>
+                  ) : (
+                    <th key={i}>{th.heading}</th>
+                  )}
+                </>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((tr) => (
+              <tr key={tr.id}>
+                {heading.map((th) => {
+                  const td = tr[th.key];
+                  return td.component ? (
+                    <td>{td.component()}</td>
+                  ) : td.icon ? (
+                    <td>
+                      <span>
+                        <td.icon />
+                      </span>
+                      <span>{td.value}</span>
+                    </td>
+                  ) : (
+                    <td>{td.value}</td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      
     </section>
   );
 };

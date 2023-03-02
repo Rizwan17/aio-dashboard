@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import UserIcon from "../UserIcon";
 import styles from "./dropdown.module.css";
+import { IoIosClose } from "react-icons/io";
 
 const DropdownMenu = ({
   children,
@@ -57,7 +58,21 @@ const DropdownMenu = ({
         }`}
         style={dropdownContainerStyle}
       >
-        <div style={{ background: '#fff' }}>{children}</div>
+        <div style={{ 
+          height: '100%',
+          background: "#fff",
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center' 
+        }}>
+          <button
+            className={styles["dropdown-close-btn"]}
+            onClick={() => setDropdownActive(false)}
+          >
+            <IoIosClose />
+          </button>
+          {children}
+        </div>
       </div>
     </div>
   );

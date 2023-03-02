@@ -6,7 +6,11 @@
     position: fixed;
     height: 100%;
     /* border-right: 1px solid rgb(220, 218, 218); */
+
+    z-index: 1;
 }
+
+
 .logo-container{
     width: 100%;
     display: flex;
@@ -52,5 +56,15 @@
 @media screen and (max-width: 360px) {
     .container{
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: none;
+    }
+
+    .container.active{
+        display: block;
     }
 }

@@ -4,6 +4,7 @@ import DropdownMenu from "../DropdownMenu";
 import IconWrapper from "../IconWrapper";
 import UserIcon from "../UserIcon";
 import styles from "./Header.module.css";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
 
 /*
 
@@ -34,10 +35,17 @@ const NotificationsIcon = ({ onClick = () => {} }) => (
   </IconWrapper>
 );
 
-const Header = () => {
+const Header = ({
+    toggleSidebarMenu
+}) => {
   return (
     <section className={styles.container}>
-      <div className={styles["left-items"]}>left</div>
+      <div className={styles["left-items"]}>
+        <button className={styles["close-sidemenu"]} onClick={toggleSidebarMenu}>
+            <HiOutlineMenuAlt1 />
+        </button>
+        
+      </div>
       <div className={styles["right-items"]}>
         <ul className={styles["header-navigations"]}>
           <li>

@@ -28,23 +28,26 @@ export default function Dashboard() {
 
         <div style={{
           display: 'flex',
-          justifyContent: 'space-between',
+          flexWrap: 'wrap',
           margin: '10px'
         }}>
-        <Card 
-          heading="Basic Plan"
-          subHeading="Our most popular plan for small teams."
-          rightItem={() => {
-            return <h2>$20 per month</h2>
-          }}
-        >
-          <div style={{ margin: '10px' }}>
-            <Paragraph />
+          <div style={{ width: '250px', marginRight: '20px' }}>
+              <Card 
+              heading="Basic Plan"
+              subHeading="Our most popular plan for small teams."
+              rightItem={() => {
+                return <h2>$20 per month</h2>
+              }}
+            >
+              <div style={{ margin: '10px' }}>
+                <Paragraph />
+              </div>
+              
+            </Card>
           </div>
-          
-        </Card>
-
-        <Card 
+            
+          <div style={{ width: '250px' }}>
+          <Card 
           heading="Payment method"
           subHeading="Change how you pay for plan"
           
@@ -54,6 +57,9 @@ export default function Dashboard() {
           </div>
           
         </Card>
+          </div>
+
+       
         </div>
         
       
