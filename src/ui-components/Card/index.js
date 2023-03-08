@@ -4,7 +4,9 @@ const Card = ({
     heading = '',
     subHeading = '',
     rightItem = () => {},
-    children
+    children,
+    footerLeft = null,
+    footerRight = null
 }) => {
     return (
         <div className={styles["card"]}>
@@ -20,9 +22,15 @@ const Card = ({
             <div className={styles["card-body"]}>
                 {children}
             </div>
-            <div className={styles["card-footer"]}>
-                footee
-            </div>
+            {
+                (footerLeft || footerRight) && (
+                    <div className={styles["card-footer"]}>
+                        {footerLeft && footerLeft()}
+                        {footerRight && footerRight()}
+                    </div>
+                )
+            }
+            
         </div>
     );
 }

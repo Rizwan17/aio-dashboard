@@ -58,13 +58,7 @@ const DropdownMenu = ({
         }`}
         style={dropdownContainerStyle}
       >
-        <div style={{ 
-          height: '100%',
-          background: "#fff",
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center' 
-        }}>
+        <div className={styles['dropdown-sm-container']}>
           <button
             className={styles["dropdown-close-btn"]}
             onClick={() => setDropdownActive(false)}

@@ -31,6 +31,12 @@
     font-size: 30px;
 }
 
+.dropdown-sm-container{ 
+    height: 100%;
+    background: #fff;
+}
+
+
 @media screen and (max-width: 320px) {
     .dropdown-container{
         position: fixed;
@@ -42,8 +48,6 @@
     }
     .dropdown-close-btn{
         display: block;
-       
-
     }
 }
 
@@ -56,10 +60,15 @@
         top: 0;
         background: #fff;
     }
+    .dropdown-sm-container{ 
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+    }
     .dropdown-close-btn{
         display: block;
-       
-
     }
 }
 
