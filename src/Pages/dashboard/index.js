@@ -16,82 +16,76 @@ export default function Dashboard() {
   };
 
   return (
-    <div className={styles.container}>
-      <section className="content">
-        <header
-          style={{
-            margin: "20px",
-          }}
-        >
-          <h1 style={{ fontSize: "30px" }}>Plans and Billings</h1>
-          <p>Manage your plans and billing</p>
-        </header>
+    <>
+      <header style={{ margin: '20px' }}>
+        <h1 style={{ fontSize: "30px" }}>Plans and Billings</h1>
+        <p>Manage your plans and billing</p>
+      </header>
 
-        <section className={styles['section-container']}>
-          <div className={styles["card-container"]}>
-            <Card
-              heading="Basic Plan"
-              subHeading="Our most popular plan for small teams."
-              rightItem={() => {
-                return <h2>$20 per month</h2>;
+      <section className={styles["section-container"]}>
+          <Card
+            heading="Basic Plan"
+            subHeading="Our most popular plan for small teams."
+            rightItem={() => {
+              return <h2>$20 per month</h2>;
+            }}
+          >
+            <div style={{ margin: "10px" }}>
+              <Paragraph />
+            </div>
+          </Card>
+
+          <Card
+            heading="Payment method"
+            subHeading="Change how you pay for plan"
+          >
+            <div style={{ margin: "10px" }}>
+              <Paragraph />
+            </div>
+          </Card>
+
+          <Card
+            heading="Basic Plan"
+            subHeading="Our most popular plan for small teams."
+            rightItem={() => {
+              return <h2>$20 per month</h2>;
+            }}
+          >
+            <div style={{ margin: "10px" }}>
+              <Paragraph />
+            </div>
+          </Card>
+      </section>
+
+      <section className={styles["section-container"]}>
+          <Card
+            heading="Bar Chart Example"
+            subHeading="Lets see how data is ploting on chartjs"
+          >
+            <BarChartExample />
+          </Card>
+          <Card
+            heading="Doughnut Chart Example"
+            subHeading="Lets see how data is ploting on chartjs"
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
               }}
             >
-              <div style={{ margin: "10px" }}>
-                <Paragraph />
-              </div>
-            </Card>
-          </div>
-
-          <div className={styles["card-container"]}>
-            <Card
-              heading="Payment method"
-              subHeading="Change how you pay for plan"
-            >
-              <div style={{ margin: "10px" }}>
-                <Paragraph />
-              </div>
-            </Card>
-          </div>
-        </section>
-
-        <section className={styles['section-container']}>
-          <div className={styles["card-container"]}>
-            <Card
-              heading="Bar Chart Example"
-              subHeading="Lets see how data is ploting on chartjs"
-            >
-              <BarChartExample />
-            </Card>
-          </div>
-          <div className={styles["card-container"]}>
-            <Card
-              heading="Doughnut Chart Example"
-              subHeading="Lets see how data is ploting on chartjs"
-            >
-
-              <div style={{
-                display: 'flex',
-                justifyContent: 'center'
-              }}>
-                <DoughnutChartExample />
-              </div>
-              
-            </Card>
-          </div>
-          
-          
-        </section>
-
-        
-
-        <BillingHistory />
-
-        <button onClick={() => setModal(true)}>Mofoof</button>
+              <DoughnutChartExample />
+            </div>
+          </Card>
       </section>
+
+      <BillingHistory />
+
+      <button onClick={() => setModal(true)}>Mofoof</button>
 
       <Modal isOpen={modal} onClose={handleClose} heading={"AIO Dashboard"}>
         <p>Welcome to aio dashboard</p>
       </Modal>
-    </div>
+    </>
   );
 }

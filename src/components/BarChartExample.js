@@ -35,6 +35,8 @@ const BarChartExample = (props) => {
     //const el = document.getElementById("chart");
     if (chartObj.current) chartObj.current.destroy();
     createBarChart(el);
+
+    return () => chartObj.current.destroy();
   }, []);
 
   return <canvas ref={chartRef}></canvas>;

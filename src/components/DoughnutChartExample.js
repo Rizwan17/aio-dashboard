@@ -33,6 +33,8 @@ const DoughnutChartExample = (props) => {
     const el = chartRef.current;
     if (chartObjRef.current) chartObjRef.current.destroy();
     createDoughnutChart(el);
+
+    return () => chartObjRef.current.destroy();
   }, []);
 
   return (

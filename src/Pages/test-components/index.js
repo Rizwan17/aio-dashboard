@@ -2,13 +2,7 @@ import BillingHistory from "../../components/BillingHistory";
 
 
 const TestComponents = () => {
-    return (
-        <section className={'content'}>
-
-            <BillingHistory />
-            
-        </section>
-    );
+    return <BillingHistory />
 }
 
 export default TestComponents;

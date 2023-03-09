@@ -22,7 +22,9 @@ const Layout = ({ children }) => {
         toggleSidebarMenu={toggleSidebarMenu}
         showSidebarMenu={showSidebarMenu}
       />
-      {children}
+      <section className="content">
+        {children}
+      </section>
     </>
   );
 };

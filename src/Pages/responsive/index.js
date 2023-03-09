@@ -1,9 +1,6 @@
 const Responsive = () => {
     return (
-        <section className={'content'}>
-
-            
-        </section>
+        <></>
     );
 }
 
