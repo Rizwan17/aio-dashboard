@@ -6,6 +6,7 @@ import Modal from "../../ui-components/Modal";
 import styles from "./Home.module.css";
 import BarChartExample from "../../components/BarChartExample";
 import DoughnutChartExample from "../../components/DoughnutChartExample";
+import HeaderSection from "../../ui-components/HeaderSection";
 
 export default function Dashboard() {
   const [modal, setModal] = useState(false);
@@ -17,10 +18,10 @@ export default function Dashboard() {
 
   return (
     <>
-      <header style={{ margin: '20px' }}>
-        <h1 style={{ fontSize: "30px" }}>Plans and Billings</h1>
-        <p>Manage your plans and billing</p>
-      </header>
+      <HeaderSection 
+        heading={'Dashboard'}
+        subHeading={'Welcome to aio dashboard'}
+      />
 
       <section className={styles["section-container"]}>
           <Card
