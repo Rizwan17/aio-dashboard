@@ -53,7 +53,7 @@ const Header = ({
           <li>
             <DropdownMenu  CustomMenu={NotificationsIcon}>
               <div className={styles["dropdown"]}>
-              <div style={{boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'}}>
+              <div className={styles["upper-notification-box"]}>
               <div style={{display:'flex',padding: '20px 20px', justifyContent: 'space-between'}}><h3>Notifications</h3><p style={{color: 'blue', fontWeight: 'bold'}}>Mark all as Read</p></div>
               <div >
                 <ul className={styles["notification-menu"]}>
