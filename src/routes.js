@@ -25,5 +25,10 @@ export default [
         to: '/test-components',
         name: 'Test Components',
         Icon: IoGridOutline
+    },
+    {
+        to: '/statistics',
+        name: 'Statistics',
+        Icon: IoGridOutline
     }
 ];

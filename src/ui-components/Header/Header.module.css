@@ -102,3 +102,23 @@
     border-bottom: 2.5px solid blue;
 }
 
+.close-sidemenu{
+    display: none;
+}
+
+@media screen and (max-width: 320px){
+    .container{
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 100%;
+        left: 0;
+    }
+    .close-sidemenu{
+        display: block;
+    }
+}

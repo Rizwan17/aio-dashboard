@@ -1,13 +1,16 @@
 import BillingHistory from "../../components/BillingHistory";
+import HeaderSection from "../../ui-components/HeaderSection";
 
 
 const TestComponents = () => {
     return (
-        <section className={'content'}>
-
+        <>
+            <HeaderSection 
+                heading={'Plans and Billing'}
+                subHeading={'Plans and Billing History'}
+            />
             <BillingHistory />
-            
-        </section>
+        </>
     );
 }
 

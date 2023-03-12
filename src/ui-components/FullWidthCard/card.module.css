@@ -2,7 +2,7 @@
     background: #fff;
     border: 1px solid rgb(211, 211, 211);
     color: #000;
-    width: 400px;
+    width: 100%;
     min-height: 200px;
     border-radius: 10px;
     display: flex;
@@ -25,10 +25,4 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
-}
-
-@media screen and (max-width: 768px) {
-    .card{
-        width: 100%;
-    }
 }

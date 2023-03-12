@@ -1,6 +1,6 @@
 import styles from "./card.module.css";
 
-const Card = ({
+const FullWidthCard = ({
     heading = '',
     subHeading = '',
     rightItem = () => {},
@@ -36,4 +36,4 @@ const Card = ({
     );
 }
 
-export default Card;
+export default FullWidthCard;

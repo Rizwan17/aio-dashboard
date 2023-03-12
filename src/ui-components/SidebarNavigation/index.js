@@ -3,9 +3,15 @@ import styles from "./SidebarNavigation.module.css";
 import Link from "next/link";
 import routes from "../../routes";
 
-const SidebarNavigation = () => {
+const SidebarNavigation = ({
+  sidebarMenuActive,
+  toggleSidebarMenu
+}) => {
+
+  console.log({ sidebarMenuActive });
+  
   return (
-    <section className={styles.container}>
+    <section className={`${styles.container} ${sidebarMenuActive ? styles['active'] : ''}`}>
       
       <div className={styles['logo-container']}>
         <Logo />
@@ -21,6 +27,10 @@ const SidebarNavigation = () => {
             </li>
           ))} 
       </ul>
+
+      <div>
+        <button onClick={toggleSidebarMenu}>close</button>
+      </div>
     </section>
   );
 };

@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background: rgb(236, 237, 250);
+  background: rgb(236, 237, 250) !important;
   font-weight: 400;
   font-size: 14px;
 }
@@ -45,6 +45,13 @@ a {
 }
 
 @media screen and (max-width: 360px) {
+  .content{
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .content{
     width: 100%;
     left: 0;

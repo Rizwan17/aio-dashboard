@@ -3,7 +3,7 @@
 }
 
 .dropdown-menu svg{
-    font-size: 20px;
+    /* font-size: 20px; */
     cursor: pointer;
 }
 
@@ -20,3 +20,56 @@
 .dropdown-container.active{
     display: block;
 }
+
+.dropdown-close-btn{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+}
+
+.dropdown-sm-container{ 
+    height: 100%;
+    background: #fff;
+}
+
+
+@media screen and (max-width: 320px) {
+    .dropdown-container{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: #fff;
+    }
+    .dropdown-close-btn{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown-container{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: #fff;
+    }
+    .dropdown-sm-container{ 
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+    }
+    .dropdown-close-btn{
+        display: block;
+    }
+}
+
+
