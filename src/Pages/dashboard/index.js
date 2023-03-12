@@ -7,6 +7,7 @@ import styles from "./Home.module.css";
 import BarChartExample from "../../components/BarChartExample";
 import DoughnutChartExample from "../../components/DoughnutChartExample";
 import HeaderSection from "../../ui-components/HeaderSection";
+import DataCard from "../../ui-components/DataCard";
 
 export default function Dashboard() {
   const [modal, setModal] = useState(false);
@@ -22,6 +23,25 @@ export default function Dashboard() {
         heading={'Dashboard'}
         subHeading={'Welcome to aio dashboard'}
       />
+
+      <section className={styles["section-container"]}>
+        <DataCard 
+          label={'Total Revenue'}
+          value={'23,34,450'}
+          percentageValue={56.4}
+          inverse={true}
+        />
+        <DataCard 
+          label={'Total Customer'}
+          value={'45,09,333'}
+          percentageValue={3.45}
+        />
+        <DataCard 
+          label={'Total Profit'}
+          value={'43,54,111'}
+          percentageValue={10.89}
+        />
+      </section>
 
       <section className={styles["section-container"]}>
           <Card
