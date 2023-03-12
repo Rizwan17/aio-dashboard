@@ -2,13 +2,15 @@ import Logo from "../Logo";
 import styles from "./SidebarNavigation.module.css";
 import Link from "next/link";
 import routes from "../../routes";
+import { useRouter } from "next/router";
 
 const SidebarNavigation = ({
   sidebarMenuActive,
   toggleSidebarMenu
 }) => {
+  const router = useRouter();
 
-  console.log({ sidebarMenuActive });
+  console.log({ router });
   
   return (
     <section className={`${styles.container} ${sidebarMenuActive ? styles['active'] : ''}`}>
@@ -19,7 +21,7 @@ const SidebarNavigation = ({
       </div>
       <ul className={styles["sidebar-container"]}>
         {routes.map((page, index) => (
-            <li key={index} className={styles["sidebar-menu-item"]}>
+            <li key={index} className={`${styles["sidebar-menu-item"]} ${router.route === page.to ? styles['active'] : ''}`}>
               <Link href={page.to}>
                 <page.Icon />
                 <span>{page.name}</span>

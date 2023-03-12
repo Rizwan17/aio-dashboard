@@ -32,6 +32,14 @@
 .sidebar-menu-item{
     list-style: none;
     width: 100%;
+    padding: 0 10px;
+}
+
+.sidebar-menu-item.active{
+    background: black;
+    color: #fff;
+    border-radius: 5px;
+
 }
 
 .sidebar-menu-item a{
@@ -42,10 +50,13 @@
     color: rgb(79, 79, 79);
     transition: all 0.5s ease;
 }
+.sidebar-menu-item.active a{
+    color: #fff;
+
+}
 
 .sidebar-menu-item a:hover{
     font-weight: 600;
-    color: #000;
 }
 
 .sidebar-menu-item a span{

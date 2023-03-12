@@ -17,6 +17,11 @@ export default [
         Icon: IoHomeOutline
     },
     {
+        to: '/profile',
+        name: 'Profile',
+        Icon: IoHomeOutline
+    },
+    {
         to: '/dashboard',
         name: 'Dashboard',
         Icon: IoGridOutline
