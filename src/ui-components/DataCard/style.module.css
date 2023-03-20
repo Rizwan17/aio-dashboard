@@ -28,3 +28,9 @@
 .data-percentage{
     font-size: 12px;
 }
+
+@media screen and (max-width: 768px) {
+    .data-container{
+        width: 100%;
+    }
+}

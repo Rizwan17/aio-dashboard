@@ -7,6 +7,8 @@ const Modal = ({
     isOpen = false, 
     onClose = () => {},
     heading = '',
+    positiveText = '',
+    negativeText = '',
     children 
 }) => {
   return (
@@ -25,10 +27,10 @@ const Modal = ({
             </div>
             <div className={styles["modal-body"]}>{children}</div>
             <div className={styles["modal-footer"]}>
-                <div>close</div>
+                <div>{negativeText}</div>
                 <div>
                     <TextButton fontWeight={'normal'} label="Cancel" />
-                    <InlineButton label="Save Changes" />
+                    <InlineButton label={positiveText} />
                 </div>
             </div>
           </div>

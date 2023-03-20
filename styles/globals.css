@@ -21,6 +21,12 @@ a {
   text-decoration: none;
 }
 
+.mr-5{
+  margin-right: 5px;
+}
+.ml-5{
+  margin-left: 5px;
+}
 .s-10{
   font-size: 10px;
 }
@@ -37,6 +43,9 @@ a {
   color: grey;
 }
 
+ul li{
+  list-style: none;
+}
 
 .content{
   width: calc(100% - 300px);

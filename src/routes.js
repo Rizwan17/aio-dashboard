@@ -1,16 +1,9 @@
 import { IoGridOutline, IoHomeOutline } from "react-icons/io5";
+import { BsSpeedometer2 } from "react-icons/bs";
+import { BiUserCircle } from "react-icons/bi";
+import { AiOutlineBarChart } from "react-icons/ai";
 
 export default [
-    {
-        to: '/login',
-        name: 'Login',
-        Icon: IoHomeOutline,
-    },
-    {
-        to: '/signup',
-        name: 'Signup',
-        Icon: IoHomeOutline
-    },
     {
         to: '/',
         name: 'Home',
@@ -19,12 +12,12 @@ export default [
     {
         to: '/profile',
         name: 'Profile',
-        Icon: IoHomeOutline
+        Icon: BiUserCircle
     },
     {
         to: '/dashboard',
         name: 'Dashboard',
-        Icon: IoGridOutline
+        Icon: BsSpeedometer2
     },
     {
         to: '/test-components',
@@ -34,6 +27,6 @@ export default [
     {
         to: '/statistics',
         name: 'Statistics',
-        Icon: IoGridOutline
+        Icon: AiOutlineBarChart
     }
 ];

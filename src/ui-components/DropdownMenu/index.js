@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import UserIcon from "../UserIcon";
 import styles from "./dropdown.module.css";
 import { IoIosClose } from "react-icons/io";
 
 const DropdownMenu = ({
   children,
   label = null,
-  CustomMenu = UserIcon,
+  CustomMenu = null,
   dropdownContainerStyle = {},
+  count=null
 }) => {
   const [dropdownActive, setDropdownActive] = useState(false);
   const dropdownRef = useRef(null);
@@ -49,6 +49,7 @@ const DropdownMenu = ({
         ) : label ? (
           <span onClick={handleDropdownMenu}>{label}</span>
         ) : null}
+        {count && (<span className={styles['notification-counts']}>{count}</span>)}
       </div>
 
       <div

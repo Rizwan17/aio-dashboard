@@ -8,6 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 40px 20px;
+  align-items: flex-start;
 }
 
 .card-container{
@@ -15,6 +16,12 @@
   margin-right: 20px;
   margin-bottom: 20px;
   overflow: hidden;
+}
+
+.date-placeholder{
+  font-size: 10px;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {

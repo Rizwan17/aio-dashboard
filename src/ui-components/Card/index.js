@@ -23,15 +23,12 @@ const Card = ({
             <div className={styles["card-body"]}>
                 {children}
             </div>
-            {
-                (footerLeft || footerRight) && (
-                    <div className={styles["card-footer"]}>
-                        {footerLeft && footerLeft()}
-                        {footerRight && footerRight()}
-                    </div>
-                )
-            }
-            
+            {(footerLeft || footerRight) && (
+                <div className={styles["card-footer"]}>
+                    {footerLeft && footerLeft()}
+                    {footerRight && footerRight()}
+                </div>
+            )}
         </div>
     );
 }
