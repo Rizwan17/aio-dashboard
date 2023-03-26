@@ -7,7 +7,8 @@ const DropdownMenu = ({
   label = null,
   CustomMenu = null,
   dropdownContainerStyle = {},
-  count=null
+  count = null,
+  screenCenter = true,
 }) => {
   const [dropdownActive, setDropdownActive] = useState(false);
   const dropdownRef = useRef(null);
@@ -49,7 +50,9 @@ const DropdownMenu = ({
         ) : label ? (
           <span onClick={handleDropdownMenu}>{label}</span>
         ) : null}
-        {count && (<span className={styles['notification-counts']}>{count}</span>)}
+        {count && (
+          <span className={styles["notification-counts"]}>{count}</span>
+        )}
       </div>
 
       <div
@@ -59,15 +62,27 @@ const DropdownMenu = ({
         }`}
         style={dropdownContainerStyle}
       >
-        <div className={styles['dropdown-sm-container']}>
-          <button
-            className={styles["dropdown-close-btn"]}
-            onClick={() => setDropdownActive(false)}
-          >
-            <IoIosClose />
-          </button>
-          {children}
-        </div>
+        {screenCenter ? (
+          <div className={styles["dropdown-sm-container"]}>
+            <button
+              className={styles["dropdown-close-btn"]}
+              onClick={() => setDropdownActive(false)}
+            >
+              <IoIosClose />
+            </button>
+            {children}
+          </div>
+        ) : (
+          <div className={''}>
+            <button
+              className={styles["dropdown-close-btn"]}
+              onClick={() => setDropdownActive(false)}
+            >
+              <IoIosClose />
+            </button>
+            {children}
+          </div>
+        )}
       </div>
     </div>
   );

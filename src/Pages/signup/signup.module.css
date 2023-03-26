@@ -1,9 +1,9 @@
 .container{
 
 }
-.signup-container{
+.login-container{
     width: 800px;
-    height: 400px;
+    min-height: 400px;
     background: #fff;
     margin: 100px auto;
     display: flex;
@@ -11,8 +11,8 @@
 
 .brand-container{
     width: 50%;
-    height: 100%;
-    background: blue;
+    min-height: 100%;
+    background: #606060;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -24,4 +24,32 @@
 
 .form-container{
     width: 50%;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.logo-explain{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sm-brand-container{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .sm-brand-container{
+        display: block;
+    }
+    .login-container{
+        width: 90%;
+        margin: 10% 5%;
+        height: auto;
+    }
+    .brand-container{
+        display: none;
+    }
+    .form-container{
+        width: 100%;
+    }
 }

@@ -50,18 +50,31 @@ const NotificationsIcon = ({ onClick = () => {} }) => (
   </IconWrapper>
 );
 
+const NotificationList = ({ img = null, desc = "", datetime = "" }) => {
+  return (
+    <li>
+      {img && <img src={img} alt="" />}
+      <div className={styles["single-notification"]}>
+        <p>{desc}</p>
+        <p>{datetime}</p>
+      </div>
+    </li>
+  );
+};
+
 const Header = ({ toggleSidebarMenu }) => {
   return (
     <section className={styles.container}>
       <div className={styles["left-items"]}>
-        <button
-          className={styles["close-sidemenu"]}
-          onClick={toggleSidebarMenu}
-        >
-          <HiOutlineMenuAlt1 />
-        </button>
-
         <ul>
+          <li>
+            <button
+              className={styles["close-sidemenu"]}
+              onClick={toggleSidebarMenu}
+            >
+              <HiOutlineMenuAlt1 />
+            </button>
+          </li>
           <li>
             <Link href={'/'}>
               Dashboard
@@ -100,71 +113,36 @@ const Header = ({ toggleSidebarMenu }) => {
           <li>
             <DropdownMenu 
               CustomMenu={NotificationsIcon} 
-              count={4}>
-              <div className={styles["dropdown"]}>
-                <div style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      padding: "20px 20px",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <h3>Notifications</h3>
-                    <p style={{ color: "blue", fontWeight: "bold" }}>
-                      Mark all as Read
-                    </p>
-                  </div>
-                  <div>
-                    <ul className={styles["notification-menu"]}>
-                      <li>All</li>
+              count={4}
+              screenCenter={false}
+              >
+              <div className={styles["notification-container"]}>
+    
+                <div className={`flex justify-sb ${styles["notification-header"]}`}>
+                  <h3>Notifications</h3>
+                  <p style={{ color: "blue", fontWeight: "bold" }}>
+                    Mark all as Read
+                  </p>
+                </div>
+                <div className={styles["notification-body"]}>
+                  <ul className={styles["notification-tabs"]}>
+                      <li className={styles['active']}>All</li>
                       <li>Following</li>
                       <li>Archeive</li>
                     </ul>
-                  </div>
-                </div>
-                <ul className={styles["notification-tab"]}>
-                  <li>
-                    <img
-                      src="https://cdn.pixabay.com/photo/2017/03/19/20/19/ball-2157465__340.png"
-                      alt=""
-                    />
-                    <div className={styles["single-notification"]}>
-                      <p>Jacob jone mwntion you in rewrite button tab</p>
-                      <p>1:12pm</p>
-                    </div>
-                  </li>
-                  <li>
-                    <img
-                      src="https://cdn.pixabay.com/photo/2017/03/19/20/19/ball-2157465__340.png"
-                      alt=""
-                    />
-                    <div className={styles["single-notification"]}>
-                      <p>Jacob jone mwntion you in rewrite button tab</p>
-                      <p>1:12pm</p>
-                    </div>
-                  </li>
-                  <li>
-                    <img
-                      src="https://cdn.pixabay.com/photo/2017/03/19/20/19/ball-2157465__340.png"
-                      alt=""
-                    />
-                    <div className={styles["single-notification"]}>
-                      <p>Jacob jone mwntion you in rewrite button tab</p>
-                      <p>1:12pm</p>
-                    </div>
-                  </li>
-                  <li>
-                    <img
-                      src="https://cdn.pixabay.com/photo/2017/03/19/20/19/ball-2157465__340.png"
-                      alt=""
-                    />
-                    <div className={styles["single-notification"]}>
-                      <p>Jacob jone mwntion you in rewrite button tab</p>
-                      <p>1:12pm</p>
-                    </div>
-                  </li>
+                  <ul className={styles["notification-tab"]}>
+                    {[0, 1, 2].map((notification, i) => (
+                      <NotificationList 
+                        key={i}
+                        img={`https://cdn.pixabay.com/photo/2017/03/19/20/19/ball-2157465__340.png`}
+                        desc={'Jacob jone mwntion you in rewrite button tab'}
+                        datetime={'1:12pm'}
+                      />
+                    ))}
+                  
                 </ul>
+                </div>
+                
               </div>
             </DropdownMenu>
           </li>

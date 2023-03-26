@@ -61,6 +61,9 @@ const table_data = [
           label="Download"
           Icon={FaCloudDownloadAlt}
           inverse={true}
+          onClick={() => {
+            alert('Welcome to aio dashboard presentation');
+          }}
         />
       ),
     },

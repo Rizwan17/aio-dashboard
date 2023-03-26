@@ -3,7 +3,8 @@ import styles from "./textbutton.module.css";
 const TextButton = ({
     label = '',
     color = null,
-    fontWeight = null
+    fontWeight = null,
+    onClick = () => {}
 }) => {
     let style = {};
     if(color){
@@ -13,7 +14,7 @@ const TextButton = ({
         style.fontWeight = fontWeight;
     }
             
-    return <button style={style} className={styles['btn-style']}>{label}</button>
+    return <button onClick={onClick} style={style} className={styles['btn-style']}>{label}</button>
 }
 
 export default TextButton;

@@ -3,6 +3,8 @@ import styles from "./SidebarNavigation.module.css";
 import Link from "next/link";
 import routes from "../../routes";
 import { useRouter } from "next/router";
+import { TbLogout } from "react-icons/tb";
+import { BiChevronLeft } from "react-icons/bi";
 
 const SidebarNavigation = ({
   sidebarMenuActive,
@@ -14,7 +16,9 @@ const SidebarNavigation = ({
   
   return (
     <section className={`${styles.container} ${sidebarMenuActive ? styles['active'] : ''}`}>
-      
+      <button className={styles["sidebar-close-btn"]} onClick={toggleSidebarMenu}>
+        x
+      </button>
       <div className={styles['logo-container']}>
         <Logo />
         <div className={styles['logo-explain']}>AIO Dashboard</div>
@@ -30,9 +34,14 @@ const SidebarNavigation = ({
           ))} 
       </ul>
 
-      <div>
-        <button onClick={toggleSidebarMenu}>close</button>
-      </div>
+      <ul className={styles["sidebar-footer"]}>
+        {/* <button onClick={toggleSidebarMenu}>close</button> */}
+          <li className={styles["footer-item"]}> 
+            <TbLogout />
+            <span>Logouts</span>
+          </li>
+          
+      </ul>
     </section>
   );
 };

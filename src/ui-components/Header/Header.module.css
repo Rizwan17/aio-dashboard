@@ -54,18 +54,25 @@
 }
 
 /* Navigation menu notification style  */
-.dropdown{
-     border-radius: 20px;
+/* .dropdown{
+    border-radius: 20px;
     box-shadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
 }
 .dropdown div h3{
     font-size: 20px;
+} */
+.notification-container{
+    box-sizing: border-box;
+    padding: 20px 0;
+    background: #fff;
+    min-width: 450px;
+}
+.notification-header{
+    padding: 0 20px;
 }
 .notification-tab{
-    width: 450px;
+    width: 100%;
     list-style: none;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background-color: rgb(250, 250, 250);
 }
 .notification-tab li{
     display: flex;
@@ -73,6 +80,8 @@
     border-bottom: 1px solid rgba(128, 128, 128, 0.353);
     line-height: 25px;
 }
+
+
 .notification-tab li img{
     width: 50px;
     height: 50px;
@@ -86,24 +95,31 @@
 .single-notification p:nth-child(2){
     color: gray;
 }
-.notification-menu{
+.notification-tabs{
     display: flex;
     justify-content: flex-start;
-    padding: 0 20px;
     list-style-type: none;
     border-bottom: 1.5px solid rgba(169, 167, 167, 0.312);
+    padding: 0 20px;
 }
-.notification-menu li{
+.notification-tabs li{
     margin-right: 20px;
     font-size: 16px;
     font-weight: bold;    
+    transition: all .5s ease-in;
 }
-.notification-menu li:hover{
-    border-bottom: 2.5px solid blue;
+
+
+
+.notification-tabs li.active{
+    border-bottom: 2px solid #000;
 }
 
 .close-sidemenu{
     display: none;
+    background: transparent;
+    border: none;
+
 }
 
 .link{
@@ -117,6 +133,9 @@
 .left-items > ul > li{
     margin-right: 10px;
 }
+
+
+
 @media screen and (max-width: 320px){
     .container{
         width: 100%;
@@ -131,5 +150,12 @@
     }
     .close-sidemenu{
         display: block;
+    }
+    .left-items > ul > li:not(.left-items > ul > li:first-child){
+        display: none;
+    }
+    .notification-container{
+        min-width: 100%;
+        padding: 50px 0;
     }
 }

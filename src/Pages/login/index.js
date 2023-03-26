@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FullButton from "../../ui-components/FullButton";
 import Input from "../../ui-components/Input";
+import Logo from "../../ui-components/Logo";
 import styles from "./login.module.css";
 
 const Login = () => {
@@ -8,14 +9,16 @@ const Login = () => {
       <div className={styles.container}>
         <section className={styles["login-container"]}>
           <div className={styles["brand-container"]}>
-            <h2>AIO</h2>
-            <h4>Dashboard</h4>
-            <Link href={`/`}>home</Link>
+            <Logo />
+            <div className={styles['logo-explain']}>AIO Dashboard</div>
           </div>
 
           {/* login form */}
           <div className={styles["form-container"]}>
-            <div style={{ textAlign: "center", margin: "15px 0" }}>
+            <div className="t-center" style={{ margin: "15px 0" }}>
+              <div className={styles["sm-brand-container"]}>
+                <Logo />
+              </div>
               <h1>Login</h1>
               <p>Please enter email and password to login</p>
             </div>
@@ -38,9 +41,9 @@ const Login = () => {
               />
               <FullButton label={"Login"} />
 
-              <p style={{ textAlign: "center" }}>
+              <p className="tc-grey t-center">
                 Dont have an account?{" "}
-                <Link href={`/signup`}>Signup for free</Link>
+                <Link className="link" href={`/signup`}>Signup for free</Link>
               </p>
             </div>
           </div>

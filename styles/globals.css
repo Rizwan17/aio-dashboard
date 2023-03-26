@@ -43,6 +43,22 @@ a {
   color: grey;
 }
 
+.t-center{
+  text-align: center;
+}
+.flex{
+  display: flex;
+}
+.justify-center{
+  justify-content: center;
+}
+.align-center{
+  align-items: center;
+}
+.justify-sb{
+  justify-content: space-between;
+}
+
 ul li{
   list-style: none;
 }
@@ -51,6 +67,14 @@ ul li{
   width: calc(100% - 300px);
   position: relative;
   left: 300px;
+}
+
+.link{
+  color: #000;
+}
+
+.link:hover{
+  font-weight: 500;
 }
 
 @media screen and (max-width: 360px) {

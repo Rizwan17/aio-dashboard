@@ -1,0 +1,6 @@
+.section-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 20px;
+    align-items: flex-start;
+  }

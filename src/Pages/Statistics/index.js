@@ -1,6 +1,8 @@
 import BarChartExample from "../../components/BarChartExample";
 import DoughnutChartExample from "../../components/DoughnutChartExample";
 import Card from "../../ui-components/Card";
+import HeaderSection from "../../ui-components/HeaderSection";
+import Section from "../../ui-components/Section";
 
 const Statistics = () => {
   const cardContainer = {
@@ -10,38 +12,32 @@ const Statistics = () => {
   };
   return (
     <>
-      <header
-        style={{
-          margin: "20px",
-        }}
-      >
-        <h1 style={{ fontSize: "30px" }}>Statistics Report</h1>
-        <p>Visualise your data</p>
-      </header>
+      <HeaderSection
+        heading={"Statistics Report"}
+        subHeading={"Visualize your data"}
+      />
+      <Section>
+        <Card
+          heading="Bar Chart Example"
+          subHeading="An Introduction to bar chart support on aio"
+        >
+          <BarChartExample />
+        </Card>
 
-      <div
-        style={{
-          display: "flex",
-          margin: "10px",
-        }}
-      >
-        <div style={cardContainer}>
-          <Card
-            heading="Bar Chart Example"
-            subHeading="An Introduction to bar chart support on aio"
-          >
-            <BarChartExample />
-          </Card>
-        </div>
-        <div style={cardContainer}>
-          <Card
-            heading="Doughnut Chart Example"
-            subHeading="An Introduction to doughnut chart exmaple"
+        <Card
+          heading="Doughnut Chart Example"
+          subHeading="An Introduction to doughnut chart exmaple"
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
           >
             <DoughnutChartExample />
-          </Card>
-        </div>
-      </div>
+          </div>
+        </Card>
+      </Section>
     </>
   );
 };

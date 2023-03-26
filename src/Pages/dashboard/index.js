@@ -11,6 +11,7 @@ import DataCard from "../../ui-components/DataCard";
 import { SlCalender } from "react-icons/sl";
 import ActionButton from "../../ui-components/ActionButton";
 import { AiOutlinePlusCircle } from "react-icons/ai";
+import Section from "../../ui-components/Section";
 
 export default function Dashboard() {
   const [modal, setModal] = useState(false);
@@ -19,6 +20,15 @@ export default function Dashboard() {
     //alert('closing');
     setModal(false);
   };
+
+  const handleCancel = () => {
+    setModal(false);
+  }
+
+  const handleSubmit = () => {
+    alert('Submit is working..!');
+    handleClose();
+  }
 
   return (
     <>
@@ -34,7 +44,7 @@ export default function Dashboard() {
         )}
       />
 
-      <section className={styles["section-container"]}>
+      <Section>
         <DataCard
           label={"Total Revenue"}
           value={"23,34,450"}
@@ -51,9 +61,9 @@ export default function Dashboard() {
           value={"43,54,111"}
           percentageValue={10.89}
         />
-      </section>
+      </Section>
 
-      <section className={styles["section-container"]}>
+      <Section>
         <Card
           heading="Bar Chart Example"
           subHeading="Lets see how data is ploting on chartjs"
@@ -73,9 +83,9 @@ export default function Dashboard() {
             <DoughnutChartExample />
           </div>
         </Card>
-      </section>
+      </Section>
 
-      <section className={styles["section-container"]}>
+      <Section>
         <Card
           heading="Basic Plan"
           subHeading="Our most popular plan for small teams."
@@ -123,7 +133,7 @@ export default function Dashboard() {
             <Paragraph />
           </div>
         </Card>
-      </section>
+      </Section>
 
       <BillingHistory />
 
@@ -133,6 +143,8 @@ export default function Dashboard() {
         heading={"AIO Dashboard"}
         positiveText={"Save Changes"}
         negativeText={"Cancel"}
+        onCancel={handleCancel}
+        onSubmit={handleSubmit}
       >
         <p>Welcome to aio dashboard</p>
       </Modal>

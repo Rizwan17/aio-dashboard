@@ -9,12 +9,13 @@
 
 .dropdown-container{
     min-width: 200px;
-    padding: 5px;
+    border: 1px solid #c4c4c4;
     background: transparent;
     position: absolute;
     right: 0;
     display: none;
     z-index: 1000;
+    margin: 10px 0;
 }
 
 .dropdown-container.active{
@@ -73,6 +74,7 @@
         bottom: 0;
         top: 0;
         background: #fff;
+        margin: 0;
     }
     .dropdown-sm-container{ 
         height: 100%;
