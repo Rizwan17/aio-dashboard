@@ -1,8 +1,114 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## AIO Admin Dashboard
 
-## Getting Started
+Developed this aio dashboard using nextjs with lots of love.
 
-First, run the development server:
+This dashboard comes with lots of features which can reduce development time.
+
+## Available UI Components
+
+Layout Component to provide you Header and Sidebar
+
+```bash
+<Layout>
+    <p>Hello World</p>
+</Layout>
+```
+
+Header Component with dropdown option and menus
+Sidebar Navigation components
+Page Header Component with page heading and subheading and action components
+
+```bash
+<HeaderSection
+    heading={"Dashboard"}
+    subHeading={"Welcome to aio dashboard"}
+    rightItem={() => (
+        <ActionButton
+            onClick={() => setModal(true)}
+            Icon={AiOutlinePlusCircle}
+            label="Add New User"
+        />
+    )}
+/>
+```
+
+Section Component to wrap page content
+
+```bash
+<Section>
+    <DataCard
+        label={"Total Revenue"}
+        value={"23,34,450"}
+        percentageValue={56.4}
+        inverse={true}
+    />
+    <DataCard
+        label={"Total Customer"}
+        value={"45,09,333"}
+        percentageValue={3.45}
+    />
+    <DataCard
+        label={"Total Profit"}
+        value={"43,54,111"}
+        percentageValue={10.89}
+    />
+</Section>
+```
+
+Data Component to highlight important data
+
+```bash
+<DataCard
+    label={"Total Revenue"}
+    value={"23,34,450"}
+    percentageValue={56.4}
+    inverse={true}
+/>
+```
+Table component
+
+```bash
+<Table
+    mainHeading={"Billing history"}
+    subHeading={"Download your previous plan bill and usuage details."}
+    headingRightItem={() => (
+        <ActionButton
+        onClick={openModal}
+        label="Download All"
+        Icon={FaCloudDownloadAlt}
+        />
+    )}
+    heading={table_column_heading}
+    data={table_data}
+/>
+```
+
+Graph Component
+Modal Component
+
+```bash
+ <Modal
+    isOpen={modal}
+    onClose={handleClose}
+    heading={"AIO Dashboard"}
+    positiveText={"Save Changes"}
+    negativeText={"Cancel"}
+    onCancel={handleCancel}
+    onSubmit={handleSubmit}
+>
+```
+
+Action Buttons
+
+```bash
+<ActionButton
+    onClick={() => setModal(true)}
+    Icon={AiOutlinePlusCircle}
+    label="Add New User"
+/>
+```
+Input Text Component
+
 
 ```bash
 npm run dev
@@ -18,17 +124,4 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
