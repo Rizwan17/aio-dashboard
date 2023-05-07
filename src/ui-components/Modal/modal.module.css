@@ -55,3 +55,9 @@
 .footer-container{
     display: flex;
 }
+
+@media screen and (max-width: 768px) {
+    .modal-container{
+        min-width: 95%;
+    }
+}
