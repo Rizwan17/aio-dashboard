@@ -1,4 +1,4 @@
-import HeaderSection from "../../ui-components/HeaderSection";
+import HeaderSection from "@aio/components/HeaderSection";
 
 const Profile = (props) => {
     return (

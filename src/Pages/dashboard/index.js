@@ -1,17 +1,19 @@
 import { useEffect, useRef, useState } from "react";
+import Card from "@aio/components/Card";
+import Modal from "@aio/components/Modal";
+import styles from "./Home.module.css";
+
+import DoughnutChartExample from "../../components/DoughnutChartExample";
+import HeaderSection from "@aio/components/HeaderSection";
+import DataCard from "@aio/components/DataCard";
+import { SlCalender } from "react-icons/sl";
+import ActionButton from "@aio/components/ActionButton";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import Section from "@aio/components/Section";
+
 import BillingHistory from "../../components/BillingHistory";
 import Paragraph from "../../components/Paragraph";
-import Card from "../../ui-components/Card";
-import Modal from "../../ui-components/Modal";
-import styles from "./Home.module.css";
 import BarChartExample from "../../components/BarChartExample";
-import DoughnutChartExample from "../../components/DoughnutChartExample";
-import HeaderSection from "../../ui-components/HeaderSection";
-import DataCard from "../../ui-components/DataCard";
-import { SlCalender } from "react-icons/sl";
-import ActionButton from "../../ui-components/ActionButton";
-import { AiOutlinePlusCircle } from "react-icons/ai";
-import Section from "../../ui-components/Section";
 
 export default function Dashboard() {
   const [modal, setModal] = useState(false);

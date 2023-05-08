@@ -1,5 +1,5 @@
 import BillingHistory from "../../components/BillingHistory";
-import HeaderSection from "../../ui-components/HeaderSection";
+import HeaderSection from "@aio/components/HeaderSection";
 
 
 const TestComponents = () => {

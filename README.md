@@ -9,9 +9,14 @@ This dashboard comes with lots of features which can reduce development time.
 Layout Component to provide you Header and Sidebar
 
 ```bash
-<Layout>
-    <p>Hello World</p>
-</Layout>
+import Layout from "@aio/components/layout";
+
+const Home = props => (
+    <Layout>
+        <p>Hello World</p>
+    </Layout>
+)
+
 ```
 
 Header Component with dropdown option and menus
@@ -19,83 +24,129 @@ Sidebar Navigation components
 Page Header Component with page heading and subheading and action components
 
 ```bash
-<HeaderSection
-    heading={"Dashboard"}
-    subHeading={"Welcome to aio dashboard"}
-    rightItem={() => (
-        <ActionButton
-            onClick={() => setModal(true)}
-            Icon={AiOutlinePlusCircle}
-            label="Add New User"
-        />
-    )}
-/>
+import HeaderSection from "@aio/components/HeaderSection";
+import ActionButton from "@aio/components/ActionButton";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+
+const Profile = (props) => {
+    return (
+        <>
+            <HeaderSection
+                heading={"Dashboard"}
+                subHeading={"Welcome to aio dashboard"}
+                rightItem={() => (
+                    <ActionButton
+                        onClick={() => setModal(true)}
+                        Icon={AiOutlinePlusCircle}
+                        label="Add New User"
+                    />
+                )}
+            />
+        </>
+    );
+}
 ```
 
 Section Component to wrap page content
 
 ```bash
-<Section>
-    <DataCard
-        label={"Total Revenue"}
-        value={"23,34,450"}
-        percentageValue={56.4}
-        inverse={true}
-    />
-    <DataCard
-        label={"Total Customer"}
-        value={"45,09,333"}
-        percentageValue={3.45}
-    />
-    <DataCard
-        label={"Total Profit"}
-        value={"43,54,111"}
-        percentageValue={10.89}
-    />
-</Section>
+import Section from "@aio/components/Section";
+import DataCard from "@aio/components/DataCard";
+
+const Home = () => {
+    return (
+        <Section>
+            <DataCard
+                label={"Total Revenue"}
+                value={"23,34,450"}
+                percentageValue={56.4}
+                inverse={true}
+            />
+            <DataCard
+                label={"Total Customer"}
+                value={"45,09,333"}
+                percentageValue={3.45}
+            />
+            <DataCard
+                label={"Total Profit"}
+                value={"43,54,111"}
+                percentageValue={10.89}
+            />
+        </Section>
+    );
+}
+
 ```
 
 Data Component to highlight important data
 
-```bash
-<DataCard
-    label={"Total Revenue"}
-    value={"23,34,450"}
-    percentageValue={56.4}
-    inverse={true}
-/>
-```
+
 Table component
 
 ```bash
-<Table
-    mainHeading={"Billing history"}
-    subHeading={"Download your previous plan bill and usuage details."}
-    headingRightItem={() => (
-        <ActionButton
-        onClick={openModal}
-        label="Download All"
-        Icon={FaCloudDownloadAlt}
+import Table from "@aio/components/Table";
+
+const BillingHistory = () => {
+    return (
+        <Table
+            # Main Heading of the table
+            mainHeading={"Billing history"}
+            # Sub Heading of the table
+            subHeading={"Download your previous plan bill and usuage details."}
+            # Table Right Side Component
+            headingRightItem={() => (
+                <ActionButton
+                onClick={openModal}
+                label="Download All"
+                Icon={FaCloudDownloadAlt}
+                />
+            )}
+            # Table Column Heading [{key: id, heading: Id }, ...]
+            heading={table_column_heading}
+            # Table Row data [{id: { value: 1 }}, ....]
+            data={table_data}
         />
-    )}
-    heading={table_column_heading}
-    data={table_data}
-/>
+    );
+}
+
 ```
 
 Graph Component
 Modal Component
 
 ```bash
- <Modal
-    isOpen={modal}
-    onClose={handleClose}
-    heading={"AIO Dashboard"}
-    positiveText={"Save Changes"}
-    negativeText={"Cancel"}
-    onCancel={handleCancel}
-    onSubmit={handleSubmit}
->
+import Modal from "@aio/components/Modal";
+
+const ExampleModal = (props) => {
+    const [modal, setModal] = useState(false);
+
+    const handleClose = () => {
+        //alert('closing');
+        setModal(false);
+    };
+
+    const handleCancel = () => {
+        setModal(false);
+    }
+
+    const handleSubmit = () => {
+        alert('Submit is working..!');
+        handleClose();
+    }
+
+    return (
+        <Modal
+            isOpen={modal}
+            onClose={handleClose}
+            heading={"AIO Dashboard"}
+            positiveText={"Save Changes"}
+            negativeText={"Cancel"}
+            onCancel={handleCancel}
+            onSubmit={handleSubmit}
+        >
+    );
+}
+ 
 ```
 
 Action Buttons

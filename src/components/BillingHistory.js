@@ -1,12 +1,12 @@
-import ActionButton from "../ui-components/ActionButton";
-import Table from "../ui-components/Table";
+import ActionButton from "@aio/components/ActionButton";
+import Table from "@aio/components/Table";
 import {
   FaCloudDownloadAlt,
   FaRegFilePdf,
   FaLongArrowAltDown,
 } from "react-icons/fa";
 import { useState } from "react";
-import Modal from "../ui-components/Modal";
+import Modal from "@aio/components/Modal";
 
 const table_column_heading = [
   {

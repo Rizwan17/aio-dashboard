@@ -1,7 +1,7 @@
 import Link from "next/link";
-import FullButton from "../../ui-components/FullButton";
-import Input from "../../ui-components/Input";
-import Logo from "../../ui-components/Logo";
+import FullButton from "@aio/components/FullButton";
+import Input from "@aio/components/Input";
+import Logo from "@aio/components/Logo";
 import styles from "./signup.module.css";
 
 const Signup = () => {
