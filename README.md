@@ -6,7 +6,9 @@ This dashboard comes with lots of features which can reduce development time.
 
 ## Available UI Components
 
-Layout Component to provide you Header and Sidebar
+# Layout Component to provide you Header and Sidebar
+
+Layout Component brings up Top Header and Side Navigation Controls
 
 ```bash
 import Layout from "@aio/components/layout";
@@ -19,9 +21,7 @@ const Home = props => (
 
 ```
 
-Header Component with dropdown option and menus
-Sidebar Navigation components
-Page Header Component with page heading and subheading and action components
+# Page Header Component with page heading and subheading and action components
 
 ```bash
 import HeaderSection from "@aio/components/HeaderSection";
@@ -47,7 +47,10 @@ const Profile = (props) => {
 }
 ```
 
-Section Component to wrap page content
+# Section Component to wrap page content
+
+Section component is a container which brings alignment and spacing for content
+
 
 ```bash
 import Section from "@aio/components/Section";
@@ -77,8 +80,6 @@ const Home = () => {
 }
 
 ```
-
-Data Component to highlight important data
 
 
 Table component
@@ -111,7 +112,6 @@ const BillingHistory = () => {
 
 ```
 
-Graph Component
 Modal Component
 
 ```bash
@@ -149,16 +149,19 @@ const ExampleModal = (props) => {
  
 ```
 
-Action Buttons
+# Input Text Component
 
 ```bash
-<ActionButton
-    onClick={() => setModal(true)}
-    Icon={AiOutlinePlusCircle}
-    label="Add New User"
-/>
+import Input from "@aio/components/Input";
+
+    <Input
+        inputContainerStyle={{ padding: "15px 30px" }}
+        type="text"
+        placeholder="Email"
+        onChange={(e) => console.log(e)}
+        name="email"
+        label={"Email"} />
 ```
-Input Text Component
 
 
 ```bash
